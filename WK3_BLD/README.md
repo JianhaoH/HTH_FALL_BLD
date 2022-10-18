@@ -1,0 +1,1 @@
+I was interested in this dataset because my other datasets weren't working.I hope to learn alot about pokemon.
