@@ -1,5 +1,6 @@
 import pandas
-
+import seaborn
+import matplotlib.pyplot
 pandas.options.display.max_columns = None
 pandas.options.display.max_rows = None
 
@@ -13,3 +14,9 @@ csv_data[csv_data["Type 1"] == "Dragon"].sort_values(by="Attack", ascending=Fals
 csv_data.groupby("Generation")["Legendary"].sum().sort_values(ascending=False)
 '''which generation of pokemon has the highest average speed'''
 csv_data.groupby("Generation")["Speed"].mean().sort_values(ascending=False)
+
+'''plot all pokemon aattack on a scatter plot'''
+seaborn.scatterplot(x="Attack", y="Defense", data=csv_data)
+
+'''pie chart of pokemon types'''
+seaborn.countplot(x="Type 1", data=csv_data)
